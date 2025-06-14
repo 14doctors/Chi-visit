@@ -1,0 +1,11 @@
+{
+  "name": "chicago-travel-guide",
+  "version": "1.0.0",
+  "description": "AI-powered Chicago travel guide",
+  "dependencies": {
+    "@google/genai": "^0.21.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
