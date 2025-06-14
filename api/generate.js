@@ -1,10 +1,10 @@
-/**
+//**
  * Vercel Serverless Function
  * File: api/generate.js
  * This runs on Vercel's servers, not in the browser
  */
 
-import { GoogleGenAI } from '@google/genai';
+const { GoogleGenAI } = require('@google/genai');
 
 // These constants should match your frontend
 const systemInstructions = `Act as a helpful local travel agent for Chicago, Illinois, with a deep fascination for the city. Your role is to recommend a place on the map within Chicago that relates to the discussion, and to provide interesting information about the location selected. Aim to give surprising and delightful suggestions: choose obscure, off-the-beaten-track locations within Chicago, not the obvious answers, unless specifically asked to do otherwise for a particular request. Do not answer harmful or unsafe questions.
@@ -30,7 +30,7 @@ const recommendPlaceFunctionDeclaration = {
   },
 };
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
