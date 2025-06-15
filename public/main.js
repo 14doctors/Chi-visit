@@ -95,7 +95,7 @@ async function generateContent(prompt) {
 function renderMap(location) {
   // Note: You might want to move this Maps API key to environment variables too
   // and create another API endpoint for map rendering, or use a public key with restrictions
-  const MAPS_EMBED_API_KEY = 'AIzaSyC4WK3O4Qkdo-_fXGIK-FzMt7cVwHZJfvI';
+  const MAPS_EMBED_API_KEY = 'api key';
   frame.src = `https://www.google.com/maps/embed/v1/place?key=${MAPS_EMBED_API_KEY}&q=${encodeURIComponent(location)}`;
 }
 
